@@ -16,7 +16,7 @@
 			<h3>سبد خرید</h3>
 			<div>تعاد کالا : <span class="count">{{{ $basket ? $basket->productCount : 0 }}}</span></div>
 			<div>قیمت : <span class="cost">{{{ $basket ? $basket->price : 0 }}}</span></div>
-			<a href="{{ route('basket.list') }}">نمایش سبد خرید</a>
+			<a href="">نمایش سبد خرید</a>
 		</div>
 			
 	</div>
@@ -55,31 +55,7 @@
 	
 </div>
 
-<script type="text/javascript">
-	
-$(function()
-{
 
-	$('.product button').click(function()
-	{
-		var pid = $(this).closest('.product').find('input').val();
-		
-		$.post('{{{ route('add.to.basket') }}}', {id : pid, count : 1}, function(data){
-
-			$('#basket .cost').html(data.cost);
-			$('#basket .count').html(data.count);
-
-			//alert('سبد خرید بروز شد')
-
-			$('html, body').animate({scrollTop : 0}, 500)
-
-			$('#basket').delay(500).fadeOut(50).fadeIn(50).fadeOut(50).fadeIn(50)
-		}, 'json');
-	});
-
-})
-
-</script>
 
 </body>
 </html>
