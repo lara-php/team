@@ -1,0 +1,125 @@
+body,html{
+	padding: 0;
+	border: 0;
+	outline: 0;
+	margin: 0;
+}
+.clearfix{
+	clear: both;
+}
+h3.section-title{
+	direction: rtl;
+	border-bottom: 2px solid #333;
+	margin: 0;
+	color: #fff;
+	position: relative;
+	z-index: 0;
+	padding-right: 10px;
+}
+h3.section-title:before{
+	content: "";
+	background-color: #000;
+	position: absolute;
+	width: 200px;
+	height: 100%;
+	z-index: -1;
+	top: 0;
+	right: 0;
+
+}
+#head{
+	background-color: #444;
+	height: 40px;
+	
+
+}
+#body{
+	width: 1100px;
+	margin: 20px auto;
+}
+#body >.left{
+	float: left;
+	width: 830px;
+	
+}
+#body >.left > .slide{
+	height: 380px;
+	background-color: #000;
+	margin-bottom: 20px;
+
+
+}
+#body >.left > .last-product{
+	
+	margin-bottom: 20px;
+
+}
+#body >.left > .last-product > .product{
+	width: 23%;
+	float: right;
+	margin-left: 2.66%;
+	height: 250px;
+	border: 1px solid #000;
+	box-sizing: border-box;
+	margin-top: 20px;
+
+}
+#body >.left > .last-product > .product:nth-of-type(4n){
+	margin-left: 0
+}
+
+
+#body >.left > .top-sells{
+	
+
+}
+#body >.left > .top-sells > .product{
+	width: 23%;
+	float: right;
+	margin-left: 2.66%;
+	height: 250px;
+	border: 1px solid #000;
+	box-sizing: border-box;
+	margin-top: 20px;
+
+}
+#body >.left > .top-sells > .product:nth-of-type(4n){
+	margin-left: 0;
+}
+
+#body >.right{
+	float: right;
+	width: 250px;
+}
+
+#basket{
+	background-color: yellow;
+}
+
+#foot{
+	background-color: #444;
+	height: 300px;
+	
+
+}
+
+
+/**/
+.product{
+	position: relative;
+}
+.product button{
+	border: 0;
+	margin: 0;
+	padding: 5px;
+	background-color: #389900;
+	color: #FFF;
+	position: absolute;
+	left: 5px;
+	bottom: 5px;
+	cursor: pointer;
+}
+
+.product button:hover{
+	background-color: #42AF03;
+}
