@@ -55,31 +55,7 @@
 	
 </div>
 
-<script type="text/javascript">
-	
-$(function()
-{
 
-	$('.product button').click(function()
-	{
-		var pid = $(this).closest('.product').find('input').val();
-		
-		$.post('{{{ route('add.to.basket') }}}', {id : pid, count : 1}, function(data){
-
-			$('#basket .cost').html(data.cost);
-			$('#basket .count').html(data.count);
-
-			//alert('سبد خرید بروز شد')
-
-			$('html, body').animate({scrollTop : 0}, 500)
-
-			$('#basket').delay(500).fadeOut(50).fadeIn(50).fadeOut(50).fadeIn(50)
-		}, 'json');
-	});
-
-})
-
-</script>
 
 </body>
 </html>
