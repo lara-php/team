@@ -24,3 +24,12 @@ Route::get('/', function()
 });
 
 
+Route::get('basket/product-list', ['as' => 'basket.list', function()
+{
+
+	$basket = Basket::where('sessionId', '=', Session::getId())->first();
+
+	return View::make('basket.list')->with('basket', $basket);
+
+}]);
+
