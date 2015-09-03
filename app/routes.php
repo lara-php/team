@@ -69,3 +69,13 @@ Route::post('add-to-basket', ['as' => 'add.to.basket', function()
 	//
 	return ['cost' => $row->p, 'count' => $row->c];
 }]);
+
+
+Route::get('basket/product-list', ['as' => 'basket.list', function()
+{
+
+	$basket = Basket::where('sessionId', '=', Session::getId())->first();
+
+	return View::make('basket.list')->with('basket', $basket);
+
+}]);
