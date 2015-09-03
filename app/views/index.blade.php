@@ -16,7 +16,7 @@
 			<h3>سبد خرید</h3>
 			<div>تعاد کالا : <span class="count">{{{ $basket ? $basket->productCount : 0 }}}</span></div>
 			<div>قیمت : <span class="cost">{{{ $basket ? $basket->price : 0 }}}</span></div>
-			<a href="">نمایش سبد خرید</a>
+			<a href="{{ route('basket.list') }}">نمایش سبد خرید</a>
 		</div>
 			
 	</div>
